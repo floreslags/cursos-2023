@@ -1,0 +1,25 @@
+{
+  "name": "primeros-pasos-npm",
+  "version": "1.0.0",
+  "description": "Aprendizaje de npm",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floreslags/cursos-2023.git"
+  },
+  "author": "Sergio Flores <sergiofol1093@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floreslags/cursos-2023/issues"
+  },
+  "homepage": "https://github.com/floreslags/cursos-2023#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "responsimple": "^1.0.1",
+    "serve": "^14.2.1"
+  }
+}
