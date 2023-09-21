@@ -1,0 +1,20 @@
+{
+  "name": "05_projects",
+  "version": "1.0.0",
+  "description": "Basic TodoList App using NodeJS CLI",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Sergio Flores",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
