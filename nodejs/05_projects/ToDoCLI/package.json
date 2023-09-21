@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev_app":"nodemon fs_app.js",
+    "start_app":"node fs_app.js"
   },
   "keywords": [],
   "author": "Sergio Flores",
