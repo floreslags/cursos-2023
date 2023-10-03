@@ -1,18 +1,5 @@
 # Maratones
 
-1. Identificar las entidades del sistema. 
-2. Identificar los atributos de las entidades.
-3. Identificar las llaves primarias y foráneas de las entidades
-4. Asignar una nomenclatura adecuada a las entidades y sus atributos (sintáxis)
-5. Identificar las entidades pivotes del sistema
-6. Identificar los catálogos del sistema
-7. Identificar los tipos de relaciones del sistema
-8. Crear el modelo entidad-relacion del sistema
-9. Crear el modelo relacional de la base de datos del sistema
-10. Identificar los tipos de datos de los atributos de las entidades del sistema
-11. Identificar los atributos que pueden ser únicos en el sistema
-12. Identificar las reglas de negocio (CRUD) del sistema
-
 ## Listado de entidades
 - Carreras
 - Tipos de carreras
@@ -122,8 +109,8 @@
 
 ## Relaciones
 
-1. Una **carrera** _pertence_ a **tipo de carrera** (1:1)
-2. Una **carrera** se _corre_ en un **pais** (1:1)
+1. Una **carrera** _pertence_ a **tipo de carrera** (1:N)
+2. Una **carrera** se _corre_ en un **pais** (1:N)
 
 ## Diagramas
 ### Carreras Modelo entidad-relacion
