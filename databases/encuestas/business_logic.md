@@ -88,3 +88,4 @@
 1. Read one result
 1. Update one result
 1. Delete one result
+1. Get the acertivity percent value of the surveyed, when answering the survey
