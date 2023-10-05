@@ -1,0 +1,37 @@
+{
+    "characters":[
+        {
+            "character_id":"",
+            "name":"",
+            "armours":["armour 1","armour 2"],
+            "sign":"",
+            "birthday":"",
+            "country":"",
+            "training":"",
+            "masters":["master 1","master 2"],
+            "armies":["army 1","army 2"],
+            "ranks":["rank 1","rank 2"],
+            "photos":["photo 1","photo 2"],
+            "techniques":["technique1","technique 2"],
+            "franchises":["franchise 1","franchise 2"],
+            "media":["media 1","media 2"],
+            "canonical":""
+        }
+    ],
+    "armours":[
+        {
+            "armour_id":"",
+            "armour":"",
+            "armour_tipe":"",
+            "versions":[
+                {
+                    "name":"version 1",
+                    "photos":["photo version 1"]
+                }
+            ],
+            "bearers":[
+                {"name":"berarer 1","photo":"photo bearer 1"}
+            ]
+        }
+    ]
+}
