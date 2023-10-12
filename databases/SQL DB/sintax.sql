@@ -15,9 +15,7 @@
 */
 
 
-
-
--- :::::::::: DDL PARA GESTIÓN DE BASES DE DATOS ::::::::::
+-- :::::::::: DDL: GESTION DE BASES DE DATOS ::::::::::
 
 -- Mostrar o listar las bases de datos existentes
 SHOW DATABASES;
@@ -43,7 +41,7 @@ DROP DATABASE IF EXISTS curso_sql;
 
 
 
--- :::::::::: DCL PARA GESTION DE USUARIOS ::::::::::
+-- :::::::::: DCL: GESTIÓN DE USUARIOS Y PRIVILEGIOS ::::::::::
 
 -- CREAR UN USUARIO
 CREATE USER 'floreslags'@'localhost' IDENTIFIED BY 'qwerty';
@@ -72,9 +70,7 @@ DROP USER 'floreslags'@'localhost';
 
 
 
-
-
--- :::::::::: DDL PARA GESTION DE TABLAS ::::::::::
+-- :::::::::: DDL: GESTIÓN DE TABLAS ::::::::::
 
 -- USAR O SELECCIONAR UNA DETERMINADA BASE DE DATOS PARA GESTIONAR
 USE curso_sql;
@@ -116,10 +112,17 @@ CREATE TABLE users(
     age INT DEFAULT 0  
 );
 
+-- REINICIAR UNA TABLA CON LOS VALORES AUTO-NUMERICOS
+TRUNCATE TABLE users;
 
 
 
--- :::::::::: DML PARA GESTION DE REGISTROS DE UNA TABLA CRUD ::::::::::
+
+
+
+-- :::::::::: DML: GESTIÓN DE REGISTROS ::::::::::
+
+-- ::::: INSERT :::::
 
 -- CREAR UN  REGISTRO FORMA 1 (MALA PRÁCTICA)
 INSERT INTO users VALUES(0,'Sergio','Flores','floreslags@mail.com','My addresss',29);
@@ -135,6 +138,8 @@ INSERT INTO users (name,last_name,email,age) VALUES
 ('Brenda','Flowers','curlydog@mail.com',1),
 ('Bruno','Flowers','rockercat@mail.com',3);
 
+-- ::::: SELECT :::::
+
 -- RECUPERAR / EXTRAER UN CONJUNTO DE REGISTROS
 SELECT * FROM users;
 
@@ -149,7 +154,7 @@ SELECT COUNT(*) AS total_usuarios FROM users;
 SELECT COUNT(*) total_usuarios FROM users;
 
 
---- :::::::::: DML IMPLEMENTANDO CLÁUSULAS DE COMPRARACIÓN PARA CONSULTA DE REGISTROS DE UNA TABLA EN BASE ::::::::::
+-- ::::: SELECT + CLÁUSULAS DE COMPARACIÓN :::::
 
 -- CLÁUSULA WHERE: EXTRACCION DE DATOS DE UNA TABLA EN BASE A UN VALOR DE CONSULTA
 SELECT * FROM users WHERE name = 'Sergio';
@@ -176,8 +181,7 @@ SELECT * FROM users WHERE email NOT LIKE '%@mail.com';
 SELECT * FROM users WHERE name NOT LIKE '%br%';
 
 
-
---- :::::::::: DML IMPLEMENTANDO OPERADORES RELACIONALES PARA CONSULTA DE REGISTROS DE UNA TABLA EN BASE ::::::::::
+--- ::::: SELECT +  OPERADORES RELACIONALES :::::
 
 -- CONSULTA DE UNA TABLA CON OPERADOR RELACIONAL 'NO ES IGUAL'
 SELECT * FROM users WHERE age != 3;
@@ -202,7 +206,7 @@ SELECT * FROM users WHERE age <= 3;
 
 
 
---- :::::::::: DML IMPLEMENTANDO OPERADORES LÓGICOS PARA CONSULTA DE REGISTROS DE UNA TABLA EN BASE ::::::::::
+--- ::::: SELECT + OPERADORES LÓGICOS :::::
 
 -- CONSULTA DE UNA TABLA CON OPERADOR LÓGICO 'NOT'
 SELECT * FROM users WHERE NOT address = 'No Address Defined';
@@ -213,3 +217,14 @@ SELECT * FROM users WHERE address != 'No Address Defined' AND age >= 3;
 
 -- CONSULTA DE UNA TABLA CON OPERADOR LÓGICO 'OR'
 SELECT * FROM users WHERE address != 'No Address Defined' OR age >= 3;
+
+
+-- ::::: UPDATE ::::: 
+
+-- ACTUALIZAR REGISTRO DE UNA TABLA (LA SENTENCIA SIEMPRE DEBE INCLUIR CLÁUSULA WHERE)
+UPDATE users SET email = 'brian@mail.com', address = "Brian's Address" WHERE user_id = 2;
+
+-- ::::: DELETE ::::: 
+
+-- ELIMINAR REGISTRO DE UNA TABLA (LA SENTENCIA SIEMPRE DEBE INCLUIR CLÁUSULA WHERE)
+DELETE FROM users WHERE user_id = 2;
