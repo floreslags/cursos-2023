@@ -15,6 +15,7 @@
 - JavaScript: Uso del DOM
 
 ## Agosto
+- JavaScript: Uso del BOM
 - JavaScript: Consumo de REST APIs
 - JavaScript: Single Page Applications (SPA's)
 
@@ -24,6 +25,7 @@
  - Bases de datos: Diseño y modelado
 
 ## Octubre
+ - Bases de datos: Diseño y modelado
  - Bases de datos: Relacionales o SQL
  - Bases de datos: No Relacionales o NoSQL
  
