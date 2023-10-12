@@ -189,3 +189,24 @@ SELECT * FROM productos WHERE nombre REGEXP "[a-z]";
 SELECT * FROM productos WHERE nombre REGEXP "[x-z]";
 SELECT * FROM productos WHERE precio REGEXP "[0-9]";
 SELECT * FROM productos WHERE descripcion REGEXP "[0-9]";
+
+-- :::::::::: DML: FUNCIONES DE CADENAS DE TEXTO ::::::::::
+SELECT('Hello World') texto;
+SELECT LOWER('Hello World') minusculas;
+SELECT LCASE('Hello World') minusculas;
+SELECT UPPER('Hello World') mayusculas;
+SELECT UCASE('Hello World') mayúsculas;
+
+SELECT LEFT('Hello World',6);
+SELECT RIGHT('Hello World',6);
+SELECT LENGTH('Hello World');
+SELECT REPEAT('Hello World',3);
+SELECT REVERSE('Hello World');
+SELECT REPLACE('Hello World','o','x');
+SELECT LTRIM('   Hello World   ');
+SELECT RTRIM('   Hello World   ');
+SELECT TRIM('   Hello World   ');
+SELECT CONCAT('Hello World', ' from ','SQL');
+SELECT CONCAT_WS('-','Hello', 'World', 'from','SQL');
+
+SELECT UCASE(nombre), LCASE(descripcion) FROM productos;
