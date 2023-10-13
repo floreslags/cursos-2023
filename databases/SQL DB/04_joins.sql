@@ -141,9 +141,47 @@ SELECT * FROM caballeros c RIGHT JOIN signos s ON c.signo = s.signo_id;
 
 -- ::::: EJERCICIO :::::
 SELECT c.caballero_id, c.nombre, a.armadura, s.signo, r.rango, e.ejercito, p.pais
-    FROM caballeros c
-    INNER JOIN armaduras a ON c.armadura = a.armadura_id
-    INNER JOIN signos s ON c.signo = s.signo_id
-    INNER JOIN rangos r ON c.rango = r.rango_id
-    INNER JOIN ejercitos e ON c.ejercito = e.ejercito_id
-    INNER JOIN paises p ON c.pais = p.pais_id;
+FROM caballeros c
+INNER JOIN armaduras a ON c.armadura = a.armadura_id
+INNER JOIN signos s ON c.signo = s.signo_id
+INNER JOIN rangos r ON c.rango = r.rango_id
+INNER JOIN ejercitos e ON c.ejercito = e.ejercito_id
+INNER JOIN paises p ON c.pais = p.pais_id;
+
+
+-- ::::: DML: SUB-CONSULTAS :::::
+
+SELECT signo, (SELECT COUNT(*) FROM caballeros c WHERE c.signo = s.signo_id ) total_caballeros
+FROM signos s;
+SELECT rango, (SELECT COUNT(*) FROM caballeros c WHERE c.rango = r.rango_id ) total_rangos
+FROM rangos r;
+SELECT ejercito, (SELECT COUNT(*) FROM caballeros c WHERE c.ejercito = e.ejercito_id ) total_ejercitos
+FROM ejercitos e;
+SELECT pais, (SELECT COUNT(*) FROM caballeros c WHERE c.pais = p.pais_id ) total_paises
+FROM paises p;
+
+-- ::::: DML: VISTAS :::::
+
+-- GENERAR UNA VISTA
+CREATE VIEW vista_caballeros AS
+SELECT c.caballero_id, c.nombre, a.armadura, s.signo, r.rango, e.ejercito, p.pais
+FROM caballeros c
+INNER JOIN armaduras a ON c.armadura = a.armadura_id
+INNER JOIN signos s ON c.signo = s.signo_id
+INNER JOIN rangos r ON c.rango = r.rango_id
+INNER JOIN ejercitos e ON c.ejercito = e.ejercito_id
+INNER JOIN paises p ON c.pais = p.pais_id;
+
+CREATE VIEW vista_signos AS
+SELECT signo, (SELECT COUNT(*) FROM caballeros c WHERE c.signo = s.signo_id ) total_caballeros
+FROM signos s;
+-- EJECUTAR DETERMINADA VISTA
+SELECT * FROM vista_caballeros;
+SELECT * FROM vista_signos;
+
+-- ELIMINAR VISTA
+DROP VIEW vista_caballeros;
+DROP VIEW vista_signos;
+
+-- MOSTRAR VISTAS
+SHOW FULL TABLES IN curso_sql WHERE TABLE_TYPE LIKE 'VIEW';
