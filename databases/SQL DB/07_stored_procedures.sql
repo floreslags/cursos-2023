@@ -49,18 +49,7 @@ CREATE TABLE servicios(
     ON UPDATE CASCADE
 );
 
-CREATE TABLE actividad_clientes(
-  ac_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  cliente INT UNSIGNED,
-  fecha DATETIME,
-  FOREIGN KEY (cliente)
-    REFERENCES clientes(cliente_id)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE
-);
-
-
--- :::::::::: PROCEDIMIENTO ALMACENADO ::::::::::
+-- :::::::::: DDL: PROCEDIMIENTO ALMACENADO | STORED PROCEDURE ::::::::::
 
 -- CREAR ESTRUCTURA BÁSICA
 DELIMITER //
@@ -129,3 +118,26 @@ SELECT * FROM actividad_clientes;
 
 SHOW PROCEDURE STATUS WHERE db = 'curso_sql';
 DROP PROCEDURE sp_asignar_servicio;
+
+-- ::::: DDL: TRIGGERS | DISPARADORES :::::
+DELIMITER //
+CREATE TRIGGER trigger_name
+    BEFORE | AFTER
+    INSERT | UPDATE | DELETE
+    FOR EACH NOW
+BEGIN
+END //
+DELIMITER ;
+
+-- Log de actividades / Bitácora de actividades
+CREATE TABLE actividad_clientes(
+  ac_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  cliente INT UNSIGNED,
+  fecha DATETIME,
+  FOREIGN KEY (cliente)
+    REFERENCES clientes(cliente_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+
+SELECT * FROM actividad_clientes;
