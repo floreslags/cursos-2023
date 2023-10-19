@@ -1,9 +1,6 @@
-import {parse} from "url";
+import {parse,format} from "url";
 
-import {format} from "url";
-
-
-// Análisis de una ruta URL con PARSE
+// El método "parse" permita analizar los elementos de una ruta dada
 const urlString = "https://www.ejemplo.com:8080/ruta?param1=valor1&param2=valor2";
 
 const parseUrl = parse(urlString,true);
@@ -14,7 +11,8 @@ console.log("Ruta: ",parseUrl.pathname);
 console.log("Parámetros: ",parseUrl.query);
 
 
-// Construcción de una URL con FORMAT
+// El método "format" permita construir los elementos de una ruta a partir de los elementos definidos
+
 const urlObj = {
     protocol:"https",
     hostname:"www.ejemplo.com",
