@@ -1,0 +1,20 @@
+extends layout 
+block content 
+    main.container 
+        h1.text-center=title 
+        div.text-right
+            a.add-button(href="/add") Add New Task      
+        ul.task-list
+            if tasks.length === 0
+                li 
+                    b.text-center You have no To-Do's 😀👍
+            else 
+                each task in tasks 
+                    li(class=task.completed ? "completed":"")
+                        a(href=`/edit/${task.id}`) #{task.title}
+                        if task.completed
+                            a.uncomplete-button(href=`/uncomplete/${task.id}`) Uncomplete
+                        else
+                            a.complete-button(href=`/complete/${task.id}`) Complete
+                        a.delete-button(href=`/delete/${task.id}`) Delete
+                        
