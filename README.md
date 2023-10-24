@@ -49,7 +49,9 @@
       - Document (_MongoDB_)
  - Desarrollo backend
    - Node JS
-      - Framework Express JS
+      - MVC App - Framework Express JS
+      - API REST App - Framework Express JS
+      - MVC SSG App - Framework Express JS
  
 ## Noviembre
 
