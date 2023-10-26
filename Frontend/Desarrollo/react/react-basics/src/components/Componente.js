@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Componente como CLASE
 /* class Componente extends Component{
