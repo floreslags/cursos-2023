@@ -5,7 +5,7 @@ function ListItem(props){
     return(
         <div>
             <li>
-                <a href={props.el.web} target="_blank" rel="noopener">{props.el.name}</a>
+                <a href={props.el.web} target="_blank" rel="noopener noreferrer">{props.el.name}</a>
             </li>
         </div>
     );
