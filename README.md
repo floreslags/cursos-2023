@@ -52,7 +52,13 @@
       - MVC App - Framework Express JS
       - API REST App - Framework Express JS
       - MVC SSG App - Framework Express JS
+- Desarrollo frontend
+   - React JS
+      - Fundamentos        
  
 ## Noviembre
+- Desarrollo frontend
+   - React JS
+      - Fundamentos 
 
 ## Diciembre
