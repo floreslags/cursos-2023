@@ -10,6 +10,7 @@ import {EventosES6,EventosES7,MasSobreEventos} from './components/Eventos';
 import Comunicacion from './components/Comunicacion';
 import CicloVida from './components/CicloVida';
 import AjaxApi from './components/AjaxApi';
+import HooksCounter from './components/HooksCounter';
 
 function App() {
 
@@ -61,6 +62,8 @@ function App() {
         <CicloVida/>
         <hr/>
         <AjaxApi/>
+        <hr/>
+        <HooksCounter title="Followers"/>
       </section>
       </header>
     </div>
