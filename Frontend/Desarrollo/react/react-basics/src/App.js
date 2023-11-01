@@ -11,6 +11,8 @@ import Comunicacion from './components/Comunicacion';
 import CicloVida from './components/CicloVida';
 import AjaxApi from './components/AjaxApi';
 import HooksCounter from './components/HooksCounter';
+import HooksScroll from './components/HooksScroll';
+import HooksClock from './components/HooksClock';
 
 function App() {
 
@@ -64,6 +66,10 @@ function App() {
         <AjaxApi/>
         <hr/>
         <HooksCounter title="Followers"/>
+        <hr/>
+        <HooksScroll/>
+        <hr/>
+        <HooksClock/>
       </section>
       </header>
     </div>

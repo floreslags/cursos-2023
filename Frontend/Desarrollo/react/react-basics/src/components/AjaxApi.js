@@ -21,12 +21,12 @@ export default class AjaxApi extends Component{
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            // console.log(data);
             data.results.forEach(el=>{
                 fetch(el.url)
                 .then(res=>res.json())
                 .then(data=>{
-                    console.log(data)
+                    // console.log(data)
                     let pokemon = {
                         id:data.id,
                         name:data.name,
