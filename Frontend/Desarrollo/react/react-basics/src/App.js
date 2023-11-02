@@ -17,6 +17,7 @@ import HooksAjax from './components/HooksAjax';
 import HooksCustom from './components/HooksCustom';
 import References from './components/References';
 import Forms from './components/Forms';
+import Styles from './components/Styles';
 
 function App() {
 
@@ -82,6 +83,8 @@ function App() {
         <References/>
         <hr/>
         <Forms/>
+        <hr/>
+        <Styles/>
       </section>
       </header>
     </div>
