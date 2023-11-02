@@ -15,6 +15,7 @@ import HooksScroll from './components/HooksScroll';
 import HooksClock from './components/HooksClock';
 import HooksAjax from './components/HooksAjax';
 import HooksCustom from './components/HooksCustom';
+import References from './components/References';
 
 function App() {
 
@@ -76,6 +77,8 @@ function App() {
         <HooksAjax/>
         <hr/>
         <HooksCustom/>
+        <hr/>
+        <References/>
       </section>
       </header>
     </div>
