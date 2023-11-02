@@ -16,6 +16,7 @@ import HooksClock from './components/HooksClock';
 import HooksAjax from './components/HooksAjax';
 import HooksCustom from './components/HooksCustom';
 import References from './components/References';
+import Forms from './components/Forms';
 
 function App() {
 
@@ -79,6 +80,8 @@ function App() {
         <HooksCustom/>
         <hr/>
         <References/>
+        <hr/>
+        <Forms/>
       </section>
       </header>
     </div>
