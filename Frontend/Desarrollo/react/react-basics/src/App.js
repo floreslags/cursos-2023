@@ -18,6 +18,7 @@ import HooksCustom from './components/HooksCustom';
 import References from './components/References';
 import Forms from './components/Forms';
 import Styles from './components/Styles';
+import StyledComponents from './components/StyledComponents';
 
 function App() {
 
@@ -85,6 +86,8 @@ function App() {
         <Forms/>
         <hr/>
         <Styles/>
+        <hr/>
+        <StyledComponents/>
       </section>
       </header>
     </div>
