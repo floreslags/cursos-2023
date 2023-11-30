@@ -1,3 +1,4 @@
+import { ContactForm } from "./components/ContactForm";
 import { CrudApi } from "./components/CrudApi";
 import { CrudApp } from "./components/CrudApp";
 import { NestedSelects } from "./components/NestedSelects";
@@ -7,6 +8,8 @@ function App() {
   return (
     <>
       <h1>React Exercises</h1>
+      <hr/>
+      <ContactForm/>
       <hr/>
       <NestedSelects/>
       <hr/>
