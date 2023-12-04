@@ -62,3 +62,6 @@
       - Fundamentos 
 
 ## Diciembre
+- Desarrollo frontend
+   - React JS
+      - Router v6
