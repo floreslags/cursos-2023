@@ -36,7 +36,7 @@ export const ConditionalRender = () => {
       })}
       <h3>Objeto de usuarios</h3>
       {users.map((user, key) => {
-        return <User name={user.name} age={user.age} />;
+        return <User key={key} name={user.name} age={user.age} />;
       })}
       <h3>Ejercicio: Planetas</h3>
       <Planet planets={planets}/>
