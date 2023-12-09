@@ -1,6 +1,7 @@
 import './App.css';
 import { ConditionalRender } from './Components/ConditionalRender';
 import { Job } from './Components/Job';
+import { LifeCycle } from './Components/LifeCycle';
 import { States } from './Components/States';
 import { Tasks } from './Components/Tasks';
 import { User } from './Components/User';
@@ -10,6 +11,9 @@ function App() {
 
   return (
     <div className="App">
+      <hr/>
+      <h2>Module 6</h2>
+      <LifeCycle/>
       <hr/>
       <h2>Module 5</h2>
       <Tasks/>
