@@ -4,6 +4,7 @@ import { Job } from './Components/Job';
 import { LifeCycle } from './Components/LifeCycle';
 import { Module7 } from './Components/Module7';
 import { Module8 } from './Components/Module8';
+import { Module9 } from './Components/Module9';
 import { States } from './Components/States';
 import { Tasks } from './Components/Tasks';
 import { User } from './Components/User';
@@ -13,6 +14,8 @@ function App() {
 
   return (
     <div className="App">
+      <Module9/>
+      <hr/>
       <Module8/>
       <hr/>
       <Module7/>
