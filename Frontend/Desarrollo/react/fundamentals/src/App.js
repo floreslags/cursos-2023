@@ -2,6 +2,7 @@ import './App.css';
 import { ConditionalRender } from './Components/ConditionalRender';
 import { Job } from './Components/Job';
 import { LifeCycle } from './Components/LifeCycle';
+import { Module7 } from './Components/Module7';
 import { States } from './Components/States';
 import { Tasks } from './Components/Tasks';
 import { User } from './Components/User';
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Module7/>
       <hr/>
       <h2>Module 6</h2>
       <LifeCycle/>
