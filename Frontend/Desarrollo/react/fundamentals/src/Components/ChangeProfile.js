@@ -3,7 +3,7 @@ import { ModNineContext } from "./Module9";
 
 export const ChangeProfile = () => {
   const [newUserName, setNewUserName] = useState("");
-  const { setUserName } = useContext(ModNineContext);
+  const {setUserName}= useContext(ModNineContext);
 
   return (
     <div>

@@ -3,7 +3,7 @@ import { ChangeProfile } from "../Components/ChangeProfile";
 import { ModNineContext } from "../Components/Module9";
 
 export const Profile = () => {
-  const { userName } = useContext(ModNineContext);
+  const {userName} = useContext(ModNineContext);
   return (
     <div>
       <h2>Profile Page</h2>
