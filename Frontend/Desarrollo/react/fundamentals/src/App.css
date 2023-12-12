@@ -76,3 +76,21 @@
   margin-left: 20px;
   text-align: center;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2rem auto;
+  gap: 0.5rem;
+}
+
+form input{
+  padding: 0.5rem;
+
+}
+
+p.error{
+  color: red;
+  font-size: 0.8rem;
+}
