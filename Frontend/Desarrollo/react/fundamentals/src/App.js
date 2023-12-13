@@ -5,6 +5,7 @@ import { LifeCycle } from "./Components/LifeCycle";
 import { Module10 } from "./Components/Module10";
 import { Module11 } from "./Components/Module11";
 import { Module12 } from "./Components/Module12";
+import { Module13 } from "./Components/Module13";
 import { Module7 } from "./Components/Module7";
 import { Module8 } from "./Components/Module8";
 import { Module9 } from "./Components/Module9";
@@ -15,6 +16,8 @@ import { User } from "./Components/User";
 function App() {
   return (
     <div className='App'>
+      <Module13 />
+      <hr />
       <Module12 />
       <hr />
       <Module11 />
