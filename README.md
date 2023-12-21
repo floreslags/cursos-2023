@@ -65,3 +65,4 @@
 - Desarrollo frontend
    - React JS
       - Router v6
+      - Fundamentals
